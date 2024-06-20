@@ -30,6 +30,9 @@ body {
   max-width: 250px;
   margin: 0 auto;
 }
+section {
+  border-top: 1px dotted #BF9393;
+}
 
 .nav-desktop-right {
   display: block;
@@ -105,10 +108,11 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  border-bottom: 1px dotted #fff;
 }
 
 .nav-mobile ul li {
-  border-bottom: 1px solid #BF9393;
+  border-top: 1px dotted #fff;
 }
 
 .nav-mobile ul li a {
@@ -149,23 +153,18 @@ h1 {
   color: white;
   text-align: center;
   padding: 100px 20px;
-  background-attachment: fixed; /* Parallax effect */
-  position: relative;
 }
 
 .hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 200px;
+  margin: auto;
+  padding: 40px;
 }
 
 .hero h3,
 .hero p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  color: #BF9393;
 }
 
 .welcome {
