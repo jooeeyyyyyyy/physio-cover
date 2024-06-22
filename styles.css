@@ -5,7 +5,7 @@
 }
 html, body {
     height: 100%;
-    margin: auto;
+    margin: 0;
     font-family: "Courier Prime", monospace;
     overflow-x: hidden;
 }
@@ -18,9 +18,11 @@ body {
         radial-gradient(at 23% 5%, hsla(0, 26%, 79%, 1) 0px, transparent 50%),
         radial-gradient(at 70% 68%, hsla(0, 27%, 86%, 1) 0px, transparent 50%),
         radial-gradient(at 19% 28%, hsla(0, 29%, 96%, 1) 0px, transparent 50%);
-    background-size: 200% 200%;
+    background-size: 200% 1000%;
     animation: gradient-animation 8s ease-in-out infinite;
     overflow-x: hidden;
+    -webkit-background-size: 200% 1000%; /* Ensure Safari uses the correct background size */
+    -webkit-animation: gradient-animation 8s ease-in-out infinite; /* Ensure Safari uses the correct animation */
 }
 header {
     display: flex;
@@ -51,7 +53,7 @@ header {
 }
 .cls-1:hover {
     fill: #90BBAD;
-    stroke: #fff;
+    stroke: #90BBAD;
     stroke-miterlimit: 10;
     stroke-width: 8px;
 }
@@ -66,16 +68,10 @@ li {
     display: flex;
     flex-direction: column;
 }
-ul {
-    padding: 0;
-    margin: 0;
-}
 button {
     font-family: "Courier Prime", monospace;
     font-size: 38px;
     font-weight: 900;
-    text-align: center;
-    margin: auto;
     color: #fff;
     background: transparent;
     border: none;
@@ -115,20 +111,23 @@ p {
 .menu-item-image {
     display: flex;
     margin: auto;
-    width: 200px;
+    width: 100px;
 }
 .images {
     border-radius: 5px;
     width: 100%;
 }
+ul {
+    margin: 0;
+    padding: 0;
+}
 .scroll-container {
     position: absolute;
-    top: 120px;
-    bottom: 20px;
+    top: 200px;
+    bottom: 200px;
+    left: 0;
+    right: 0;
     overflow-y: auto;
-    overflow-x: hidden;
-    left: -10px;
-    right: -10px;
 }
 nav {
     position: absolute;
@@ -138,7 +137,6 @@ nav {
     transition: all 0.3s ease-in-out;
     opacity: 0;
     width: 100%;
-    padding: 50px 0px 0px;
 }
 nav.open {
     opacity: 1;
@@ -163,4 +161,3 @@ nav.closed {
     opacity: 0;
     pointer-events: none;
 }
-
