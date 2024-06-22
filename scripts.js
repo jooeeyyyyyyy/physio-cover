@@ -1,36 +1,42 @@
-// scripts.js
+function openAboutMenu() {
+    closeAllMenus();
+    document.querySelector('.about-menu').classList.remove('closed');
+    document.querySelector('.about-menu').classList.add('open');
+}
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+function openServicesMenu() {
+    closeAllMenus();
+    document.querySelector('.services-menu').classList.remove('closed');
+    document.querySelector('.services-menu').classList.add('open');
+}
+
+function openContactMenu() {
+    closeAllMenus();
+    document.querySelector('.contact-menu').classList.remove('closed');
+    document.querySelector('.contact-menu').classList.add('open');
+}
+
+function openHomeMenu() {
+    closeAllMenus();
+    document.querySelector('.home-menu').classList.remove('closed');
+    document.querySelector('.home-menu').classList.add('open');
+}
+
+function closeAllMenus() {
+    document.querySelectorAll('nav').forEach(nav => {
+        nav.classList.remove('open');
+        nav.classList.add('closed');
     });
-  });
-});
+}
+function openWhatsapp() {
+    window.open('https://wa.me/491628377779?text=Guten%20Tag,%20ich%20würde%20gerne%20einen%20Termin%20bei%20Ihnen%20in%20der%20Praxis%20vereinbaren.', '_blank');
+}
 
-// Initialize ScrollReveal with fade-in effect
-ScrollReveal().reveal('.header, .hero, .welcome, .footer, .logo, h1, .contact', {
-  duration: 1000,
-  opacity: 0,
-  easing: 'ease-in-out',
-  reset: true
-});
+function makeCall() {
+    window.location.href = 'tel:+491628377779';
+}
 
-// Parallax scrolling effect
-window.addEventListener('scroll', function() {
-  const scrolled = window.scrollY;
-  document.querySelector('.hero').style.backgroundPositionY = `${scrolled * 0.5}px`;
-});
+function sendEmail() {
+    window.location.href = 'mailto:cmd.jane@gmail.com';
+}
 
-// Burger menu toggle
-const burgerMenu = document.getElementById('burger-menu');
-const navMobile = document.getElementById('nav-mobile');
-
-burgerMenu.addEventListener('click', function() {
-  burgerMenu.classList.toggle('open');
-  navMobile.classList.toggle('open');
-});
-  
-  
