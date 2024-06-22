@@ -123,11 +123,12 @@ ul {
 }
 .scroll-container {
     position: absolute;
-    top: 200px;
-    bottom: 200px;
+    top: 140px;
+    bottom: 0px;
     left: 0;
     right: 0;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 nav {
     position: absolute;
