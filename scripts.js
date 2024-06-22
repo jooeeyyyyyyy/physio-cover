@@ -28,15 +28,3 @@ function closeAllMenus() {
         nav.classList.add('closed');
     });
 }
-function openWhatsapp() {
-    window.open('https://wa.me/491628377779?text=Guten%20Tag,%20ich%20würde%20gerne%20einen%20Termin%20bei%20Ihnen%20in%20der%20Praxis%20vereinbaren.', '_blank');
-}
-
-function makeCall() {
-    window.location.href = 'tel:+491628377779';
-}
-
-function sendEmail() {
-    window.location.href = 'mailto:cmd.jane@gmail.com';
-}
-
