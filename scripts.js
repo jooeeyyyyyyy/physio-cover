@@ -20,6 +20,7 @@ function openHomeMenu() {
     closeAllMenus();
     document.querySelector('.home-menu').classList.remove('closed');
     document.querySelector('.home-menu').classList.add('open');
+    document.querySelector('.scroll-container').scrollTop = 0; 
 }
 
 function closeAllMenus() {
