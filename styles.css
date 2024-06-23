@@ -6,35 +6,49 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: "Courier Prime", monospace;
+    font-family: "Baloo 2", sans-serif;
     overflow-x: hidden;
 }
 
 body {
-    background: hsla(0, 25%, 66%, 1);
+    background-color:hsla(24,64%,44%,1);
     background-image:
-        radial-gradient(at 56% 37%, hsla(0, 25%, 66%, 1) 0px, transparent 50%),
-        radial-gradient(at 79% 18%, hsla(0, 26%, 89%, 1) 0px, transparent 50%),
-        radial-gradient(at 23% 5%, hsla(0, 26%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 70% 68%, hsla(0, 27%, 86%, 1) 0px, transparent 50%),
-        radial-gradient(at 19% 28%, hsla(0, 29%, 96%, 1) 0px, transparent 50%);
-    background-size: 200% 1000%;
-    animation: gradient-animation 8s ease-in-out infinite;
+    radial-gradient(at 58% 0%, hsla(15,71%,69%,1) 0px, transparent 50%),
+    radial-gradient(at 98% 73%, hsla(15,71%,69%,1) 0px, transparent 50%),
+    radial-gradient(at 17% 38%, hsla(15,71%,69%,1) 0px, transparent 50%);
+    background-size: 200% 200%;
+    animation: gradient-animation 1s ease-in-out infinite;
     overflow-x: hidden;
-    -webkit-background-size: 200% 1000%; /* Ensure Safari uses the correct background size */
+    -webkit-background-size: 200% 200%; /* Ensure Safari uses the correct background size */
     -webkit-animation: gradient-animation 8s ease-in-out infinite; /* Ensure Safari uses the correct animation */
 }
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: transparent;
-    padding: 40px 20px;
+    padding: 30px 20px;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     box-sizing: border-box;
+}
+h2 {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+
+.background-image {
+    width: 400px;
+    display: flex;
+    margin: auto;
+    opacity: 50%;
+    height: 100%;
+    margin-top: -20px;
+    z-index: 0;
 }
 .logo-container {
     display: flex;
@@ -69,30 +83,34 @@ li {
     flex-direction: column;
 }
 button {
-    font-family: "Courier Prime", monospace;
+    font-family: "Baloo 2", sans-serif;
     font-size: 38px;
-    font-weight: 900;
+    font-weight: 600;
     color: #fff;
     background: transparent;
     border: none;
     border-radius: 100px;
     cursor: pointer;
+    /*
     text-shadow: 
         -1px -1px 0 #90BBAD,
         1px -1px 0 #90BBAD,
         -1px 1px 0 #90BBAD,
         1px 1px 0 #90BBAD;
+    */
 }
 button:hover {
     color: #90BBAD;
     scale: 1.01 ;
     transition: 0.1s ease-in;
     cursor: pointer;
+    /*
     text-shadow: 
         -1px -1px 0 #fff,
         1px -1px 0 #fff,
         -1px 1px 0 #fff,
         1px 1px 0 #fff;
+    */
 }
 .header {
     font-size: 48px;
@@ -104,7 +122,7 @@ p {
     font-size: 28px;
     line-height: 28px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 200;
     color: #fff;
     margin: 0;
 }
@@ -131,6 +149,7 @@ ul {
     overflow-x: hidden;
 }
 nav {
+    font-family: "Baloo 2", sans-serif;
     position: absolute;
     top: 0;
     left: 50%;
@@ -138,12 +157,14 @@ nav {
     transition: all 0.3s ease-in-out;
     opacity: 0;
     width: 100%;
+    max-width: 1200px;
 }
 nav.open {
     opacity: 1;
 }
 .home-menu {
     left: 50%;
+    margin-top: 150px;
 }
 .home-menu.closed {
     left: 100%;
@@ -152,6 +173,7 @@ nav.open {
 .services-menu,
 .contact-menu {
     left: -100%;
+    margin-top: 50px;
 }
 .about-menu.open,
 .services-menu.open,
