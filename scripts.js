@@ -1,42 +1,38 @@
-function openAboutMenu() {
-    closeAllMenus();
-    document.querySelector('.about-menu').classList.remove('closed');
-    document.querySelector('.about-menu').classList.add('open');
-}
-
-function openServicesMenu() {
-    closeAllMenus();
-    document.querySelector('.services-menu').classList.remove('closed');
-    document.querySelector('.services-menu').classList.add('open');
-}
-
-function openContactMenu() {
-    closeAllMenus();
-    document.querySelector('.contact-menu').classList.remove('closed');
-    document.querySelector('.contact-menu').classList.add('open');
-}
-
-function openHomeMenu() {
-    closeAllMenus();
-    document.querySelector('.home-menu').classList.remove('closed');
-    document.querySelector('.home-menu').classList.add('open');
-    document.querySelector('.scroll-container').scrollTop = 0; 
-}
-
-function closeAllMenus() {
-    document.querySelectorAll('nav').forEach(nav => {
-        nav.classList.remove('open');
-        nav.classList.add('closed');
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
     });
-}
-function openWhatsapp() {
-    window.open('https://wa.me/491628377779?text=Guten%20Tag,%20ich%20würde%20gerne%20einen%20Termin%20bei%20Ihnen%20in%20der%20Praxis%20vereinbaren.', '_blank');
-}
+  });
+});
 
-function makeCall() {
-    window.location.href = 'tel:+491628377779';
-}
+// Initialize ScrollReveal with fade-in effect
+ScrollReveal().reveal('.header, .hero, .welcome, .leistungen, .footer, .logo, h1, .contact', {
+  duration: 1000,
+  opacity: 0,
+  easing: 'ease-in-out',
+  reset: true
+});
 
-function sendEmail() {
-    window.location.href = 'mailto:cmd.jane@gmail.com';
-}
+// Burger menu toggle
+document.addEventListener('DOMContentLoaded', function () {
+  const burgerMenu = document.getElementById('burger-menu');
+  const navMobile = document.getElementById('nav-mobile');
+
+  burgerMenu.addEventListener('click', function() {
+    burgerMenu.classList.toggle('open');
+    navMobile.classList.toggle('open');
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('#nav-mobile a').forEach(link => {
+    link.addEventListener('click', function() {
+      burgerMenu.classList.remove('open');
+      navMobile.classList.remove('open');
+    });
+  });
+});
+
+  
