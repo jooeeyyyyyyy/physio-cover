@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Initialize ScrollReveal with fade-in effect
-ScrollReveal().reveal('.header, .hero, .welcome, .leistungen, .footer, .logo, h1, .contact', {
+ScrollReveal().reveal('.hero, .welcome, .leistungen, .footer, main, h1, .contact', {
   duration: 1000,
   opacity: 0,
   easing: 'ease-in-out',

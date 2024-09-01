@@ -28,8 +28,8 @@ body.no-scroll {
 
 /* Main Content */
 main {
-  max-width: 1500px;
-  padding: 0 5rem;
+  max-width: 1200px;
+  padding: 1rem 8rem;
   margin: auto;
 }
 
@@ -113,8 +113,8 @@ main {
   display: flex;
   align-items: center;
   width: auto;
-  border-radius: 20px;
-  border: 3px solid #fff;
+  border-radius: 50px;
+  border: 2px solid #fff;
   color: #fff; 
   padding: 5px 20px;
   margin: auto;
@@ -150,8 +150,11 @@ main {
   width: 1.6rem;
   height: 0.2rem;
   background-color: white;
+  color: #fff;
   margin: 0.4rem;
   transition: 0.4s;
+  border: 1px solid #90BBAD;
+  border-radius: 5px;
 }
 
 /* Burger Menu Open (X) Animation */
@@ -179,21 +182,21 @@ main {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   transition: right 0.5s ease;
+  padding: 86.2px 0;
 }
 
 .nav-mobile ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
 .nav-mobile ul li {
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .nav-mobile ul li a {
@@ -201,20 +204,27 @@ main {
   color: white;
   text-decoration: none;
   display: block;
-  padding: 0.625rem 1.25rem;
-  font-size: 1.2rem;
-  font-size: 900;
+  padding: 0.8rem 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.nav-mobile ul li a:hover {
+  color: #90BBAD;
+  border-color: #90BBAD;
 }
 .mobile-contact-button {
   display: block;
   align-items: center;
-  width: 20rem !important;
-  border-radius: 20px;
-  border: 2px solid #fff !important;
+  width: 100% !important;
   color: #fff; 
-  padding: 5px 20px !important;
+  padding: 0.5rem 2rem !important;
   margin: auto;
   font-size: 1rem;
+  text-align: left;
+}
+.mobile-contact-button:hover {
+  background-color: #90BBAD;
+  color: #90BBAD; 
 }
 .mobile-contact-button img {
   margin: auto;
@@ -259,7 +269,7 @@ h3 {
 }
 
 .heading {
-  text-align: center;
+  text-align: left;
   padding: 1.25rem;
 }
 
@@ -281,11 +291,24 @@ h2 {
   text-align: left;
 }
 
-.footer {
+.footer-container {
   background-color: #BF9393;
   color: white;
   text-align: center;
   padding: 1.25rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  justify-content: space-around;
+}
+.footer-container2 {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.25rem 0;
+  margin: auto;
+  justify-content: space-around;
+  background-color: #BF9393;
 }
 
 .footer h3 {
@@ -307,12 +330,83 @@ h2 {
 
 .footer a:hover {
   text-decoration: underline;
+  color: #90BBAD;
+}
+.footer a p:hover {
+  text-decoration: underline;
+  color: #90BBAD;
 }
 
+/* Floating Menu Styles */
+.floating-menu {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 1000;
+  position: absolute;
+  z-index: 1;
+}
+
+.floating-menu-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 1rem 0;
+  position: relative;
+  transition: transform 0.3s ease; /* Smooth transition for moving in/out */
+  transform: translateX(150px)
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  background-color: #BF9393;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px 0 0 50px;
+  text-decoration: none;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+}
+.menu-link:hover {
+  background-color: #90BBAD;
+  border-color: #90BBAD;
+}
+
+.menu-icon {
+  margin-right: 10px; /* Margin between icon and text */
+}
+
+/* Individual hover effects to move the entire menu item */
+#menu-whatsapp:hover {
+  transform: translateX(0px); /* Move item left on hover */
+}
+
+#menu-telephone:hover {
+  transform: translateX(0px); /* Move item left on hover */
+}
+
+#menu-email:hover {
+  transform: translateX(0px); /* Move item left on hover */
+}
+
+/* Static text that moves together with the entire item */
+.menu-text {
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Ensures text fades in smoothly */
+}
+
+
+
+
+
 /* Responsive Styles */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   main {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 
   h1 {
@@ -330,15 +424,30 @@ h2 {
 
   .header {
     display: flex;
+    max-height: 86.2px;
   }
 
   .logo img {
-    max-width: 18rem;
+    max-width: 300px;
     margin: auto;
+  }
+  .footer-container {
+    background-color: #BF9393;
+    color: white;
+    text-align: center;
+    padding: 1.25rem 0;
+    display: block;
+  }
+  .footer-container2 {
+    background-color: #BF9393;
+    color: white;
+    text-align: center;
+    padding: 1.25rem 0;
+    display: block;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .burger-menu {
     display: none;
   }
@@ -359,11 +468,10 @@ h2 {
 }
 
 /* ScrollReveal Animations */
-.sr .header,
 .sr .hero,
 .sr .welcome,
 .sr .footer,
-.sr .logo,
+.sr main,
 .sr h1,
 .sr .contact {
   visibility: hidden;
