@@ -1,183 +1,220 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Physiotherapie Isernhagen - Christiane Meyer-Dusche</title>
-    <meta
-      name="description"
-      content="Praxis für Physiotherapie in Isernhagen. Wir bieten manuelle Therapie und mehr. Vereinbaren Sie einen Termin noch heute."
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="description"
+        content="Praxis für Physiotherapie in Isernhagen. Wir bieten manuelle Therapie und mehr. Vereinbaren Sie einen Termin noch heute." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/scrollreveal"></script>
-  </head>
-  <body>
-    <header class="header" role="banner">
-      <div class="burger-menu" id="burger-menu" aria-label="Navigationsmenü">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="nav-desktop-left" aria-label="Primäre Navigation">
-        <ul>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="ueber_mich.html">Über mich</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="images/Logo-physio.webp"
-            alt="Logo der Physiotherapiepraxis Christiane Meyer-Dusche"
-          />
-        </a>
-      </div>
-      <nav class="nav-desktop-right" aria-label="Kontakt Navigation">
-        <ul>
-          <li>
-            <a
-              class="contact-button"
-              href="mailto:cmd.jane@gmail.com"
-              aria-label="E-Mail Senden"
-            >
-              <img src="icons/email.svg" alt="E-Mail Icon" />
-              <span class="contact-number">Email senden</span>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        /* Critical CSS for above-the-fold content */
+        body,
+        html {
+            font-family: 'Catamaran', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #BF9393;
+            scroll-behavior: smooth;
+            font-size: 1rem;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header fade-in" role="banner">
+        <div class="burger-menu" id="burger-menu" aria-label="Navigationsmenü">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-desktop-left" aria-label="Primäre Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="ueber_mich.html">Über mich</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo-physio.webp" alt="Logo der Physiotherapiepraxis Christiane Meyer-Dusche"
+                    loading="lazy" />
             </a>
-          </li>
-          <li>
-            <a class="contact-button" href="tel:051437394306" aria-label="Anrufen">
-              <img src="icons/phone.svg" alt="Telefon Icon" />
-              <span class="contact-number">Anruf</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        </div>
+        <nav class="nav-desktop-right" aria-label="Kontakt Navigation">
+            <ul>
+                <li>
+                    <a class="contact-button" href="mailto:cmd.jane@gmail.com" aria-label="E-Mail Senden">
+                        <img src="icons/email.svg" alt="E-Mail Icon" loading="lazy" />
+                        <span class="contact-number">E-mail senden</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="contact-button" href="tel:051437394306" aria-label="Anrufen">
+                        <img src="icons/phone.svg" alt="Telefon Icon" loading="lazy" />
+                        <span class="contact-number">Anrufen</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
+
     <!-- Floating Menu for Desktop -->
-    <nav id="floating-menu" class="floating-menu">
-      <ul class="floating-menu-nav">
-        <!-- WhatsApp Icon -->
-        <li class="menu-item" id="menu-whatsapp">
-          <a href="https://wa.me/your-number" class="menu-link" aria-label="Termin vereinbaren">
-            <img src="icons/whatsapp.svg" alt="WhatsApp Icon" class="menu-icon" />
-            <span class="menu-text">Termin vereinbaren</span>
-          </a>
-        </li>
-        <!-- Telephone Icon -->
-        <li class="menu-item" id="menu-telephone">
-          <a href="tel:051437394306" class="menu-link" aria-label="Anrufen">
-            <img src="icons/phone.svg" alt="Phone Icon" class="menu-icon" />
-            <span class="menu-text">Anrufen</span>
-          </a>
-        </li>
-        <!-- Email Icon -->
-        <li class="menu-item" id="menu-email">
-          <a href="mailto:cmd.jane@gmail.com" class="menu-link" aria-label="Email schreiben">
-            <img src="icons/email.svg" alt="Email Icon" class="menu-icon" />
-            <span class="menu-text">Email schreiben</span>
-          </a>
-        </li>
-      </ul>
+    <nav id="floating-menu" class="floating-menu" aria-label="Floating menu">
+        <ul class="floating-menu-nav">
+            <li class="menu-item" id="menu-whatsapp">
+                <a href="https://wa.me/051437394306" class="menu-link" aria-label="WhatsApp">
+                    <img src="icons/whatsapp.svg" alt="WhatsApp Icon" class="menu-icon" loading="lazy" />
+                    <span class="menu-text">Whatsapp</span>
+                </a>
+            </li>
+            <li class="menu-item" id="menu-telephone">
+                <a href="tel:051437394306" class="menu-link" aria-label="Anrufen">
+                    <img src="icons/phone.svg" alt="Phone Icon" class="menu-icon" loading="lazy" />
+                    <span class="menu-text">Anrufen</span>
+                </a>
+            </li>
+            <li class="menu-item" id="menu-email">
+                <a href="mailto:cmd.jane@gmail.com" class="menu-link" aria-label="Email schreiben">
+                    <img src="icons/email.svg" alt="Email Icon" class="menu-icon" loading="lazy" />
+                    <span class="menu-text">E-mail senden</span>
+                </a>
+            </li>
+        </ul>
     </nav>
-
-
-
-
-
 
     <nav id="nav-mobile" class="nav-mobile" aria-label="Mobile Navigation">
-      <ul>
-        <li style="border-top: 1px solid #fff;"><a href="leistungen.html">Leistungen</a></li>
-        <li ><a href="ueber_mich.html">Über mich</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li style="border: 0; margin-top: 5rem;">
-          <a class="mobile-contact-button" href="tel:051437394306" aria-label="Anrufen">
-            <img src="icons/whatsapp.svg" alt="Telefon Icon" />
-            <span class="contact-number">Whatsapp</span>
-          </a>
-        </li>
-        <li style="border: 0; margin-top: 2rem;">
-          <a class="mobile-contact-button" href="tel:051437394306" aria-label="Anrufen">
-            <img src="icons/phone.svg" alt="Telefon Icon" />
-            <span class="contact-number">Anruf</span>
-          </a>
-        </li>
-        <li style="border: 0; margin-top: 2rem;">
-          <a
-            class="mobile-contact-button"
-            href="mailto:cmd.jane@gmail.com"
-            aria-label="E-Mail Senden"
-          >
-            <img src="icons/email.svg" alt="E-Mail Icon" />
-            <span class="contact-number">E-mail senden</span>
-          </a>
-        </li>
-        <li style="border: 0; margin-top: 2rem;">
-          <a class="mobile-contact-button" href="https://maps.app.goo.gl/2BNad3QmoL6qMC577" aria-label="Anrufen">
-            <img src="icons/location.svg" alt="Telefon Icon" />
-            <span class="contact-number">Adresse</span>
-          </a>
-        </li>
-      </ul>
+        <ul>
+            <li style="border-top: 1px solid #fff;"><a href="index.html">Home</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="ueber_mich.html">Über mich</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li style="border: 0; margin-top: 5rem;">
+                <a class="mobile-contact-button" href="https://wa.me/051437394306" aria-label="WhatsApp">
+                    <img src="icons/whatsapp.svg" alt="Telefon Icon" loading="lazy" />
+                    <span class="contact-number">Whatsapp</span>
+                </a>
+            </li>
+            <li style="border: 0; margin-top: 2rem;">
+                <a class="mobile-contact-button" href="tel:051437394306" aria-label="Anrufen">
+                    <img src="icons/phone.svg" alt="Telefon Icon" loading="lazy" />
+                    <span class="contact-number">Anrufen</span>
+                </a>
+            </li>
+            <li style="border: 0; margin-top: 2rem;">
+                <a class="mobile-contact-button" href="mailto:cmd.jane@gmail.com" aria-label="E-Mail Senden">
+                    <img src="icons/email.svg" alt="E-Mail Icon" loading="lazy" />
+                    <span class="contact-number">E-mail senden</span>
+                </a>
+            </li>
+            <li style="border: 0; margin-top: 2rem;">
+                <a class="mobile-contact-button" href="https://maps.app.goo.gl/2BNad3QmoL6qMC577" aria-label="Anrufen">
+                    <img src="icons/location.svg" alt="Telefon Icon" loading="lazy" />
+                    <span class="contact-number">Adresse</span>
+                </a>
+            </li>
+        </ul>
     </nav>
 
-    <main>
-      <div class="heading">
-        <h1 class="main-heading text-standard">Leistungen</h1>
-      </div>
-
-      <section
-        class="leistungen"
-        role="region"
-        aria-labelledby="leisting-heading"
-      >
-        <h2 id="welcome-heading" class="sub-heading text-standard">
-          Leistungen in der Praxis und als Hausbesuch:
-        </h2>
-        <p class="text-standard">
-          KG ZNS- Krankengymnastik <br />
-          MT - manuelle Therapie KG <br />
-          ZNS - Krankengymnastik zentrales Nervensystem nach Bobath<br />
-          PNF - Propiozeptive Neuromuskuläre Fascilitation<br />
-          Sportphysiotherapie <br />
-          Atemtherapie <br />
-          Prävention<br />
-          Massage <br />Faszienbehandlung
-        </p>
-      </section>
+    <main class="fade-in">
+        <div class="heading"  data-sr-id="1">
+            <h1 class="main-heading text-standard">Leistungen</h1>
+        </div>
+        
+        <section class="leistungen" role="region" aria-labelledby="leisting-heading">
+            <h2 id="welcome-heading" class="sub-heading text-standard"  data-sr-id="2">
+                Leistungen in der Praxis und als Hausbesuch:
+            </h2>
+            <p class="text-standard"  data-sr-id="3">
+                KG ZNS- Krankengymnastik <br />
+                MT - manuelle Therapie KG <br />
+                ZNS - Krankengymnastik zentrales Nervensystem nach Bobath<br />
+                PNF - Propiozeptive Neuromuskuläre Fascilitation<br />
+                Sportphysiotherapie <br />
+                Atemtherapie <br />
+                Prävention<br />
+                Massage <br />Faszienbehandlung
+            </p>
+        </section>
     </main>
-    
-    <footer class="footer" role="contentinfo">
-      <div class="footer-container">
-        <a href="https://maps.app.goo.gl/2BNad3QmoL6qMC577" class="contact-footer" role="region" aria-labelledby="contact-heading">
-          <h3>Adresse</h3>
-          <p>Physio Cover<br />Am Ortfelde 47<br />30016 Isernhagen</p>
-        </a>
-        <div class="contact-footer" role="contact" aria-labelledby="contact-heading">
-          <h3>Kontakt</h3>
-          <p>
-            Telefon: <a href="tel:051437394306">051437394306</a><br />Email:
-            <a href="mailto:cmd.jane@gmail.com">cmd.jane@gmail.com</a>
-          </p>
-        </div>
-        <div class="contact-footer" role="time" aria-labelledby="contact-heading">
-          <h3>Behandlungszeiten</h3>
-          <p>Montag-Freitag 08:00-20:00<br />Termine nach Vereinbarung</p>
-        </div>
-      </div>
-      <div class="footer-container2">
-        <p>Copyright: Christiana Meyer-Dusche</p>
-      </div>
-    </footer>  
-    
-    <script src="scripts.js"></script>
-  </body>
-</html>
 
+    <footer class="footer fade-in" role="contentinfo">
+        <div class="footer-container">
+            <div class="contact-footer" role="region" aria-labelledby="contact-heading">
+                <h3>Adresse</h3>
+                <a href="https://maps.app.goo.gl/2BNad3QmoL6qMC577">
+                    Physio Cover<br />Am Ortfelde 47<br />30016 Isernhagen
+                </a>
+            </div>
+            <div class="contact-footer" aria-labelledby="contact-heading">
+                <h3>Kontakt</h3>
+                <p>
+                    Telefon: <a href="tel:051437394306">051437394306</a><br />Email:
+                    <a href="mailto:cmd.jane@gmail.com">cmd.jane@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact-footer" aria-labelledby="contact-heading">
+                <h3>Behandlungszeiten</h3>
+                <p>Montag-Freitag 08:00-20:00<br />Termine nach Vereinbarung</p>
+            </div>
+        </div>
+        <div class="footer-container2">
+            <p>Copyright: Christiana Meyer-Dusche</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+    <script>
+        ScrollReveal().reveal('[data-sr-id]', { duration: 1000, distance: '50px' });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper('.mySwiper', {
+                slidesPerView: 1, // Default for mobile
+                spaceBetween: 10, // Space between slides
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    // When window width is >= 768px
+                    768: {
+                        slidesPerView: 2, // Show 2 images in view for desktop
+                        spaceBetween: 20,
+                    },
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
