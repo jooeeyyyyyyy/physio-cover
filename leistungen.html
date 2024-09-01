@@ -48,36 +48,81 @@
               aria-label="E-Mail Senden"
             >
               <img src="icons/email.svg" alt="E-Mail Icon" />
+              <span class="contact-number">Email senden</span>
             </a>
           </li>
           <li>
             <a class="contact-button" href="tel:051437394306" aria-label="Anrufen">
               <img src="icons/phone.svg" alt="Telefon Icon" />
-              <span class="contact-number">051437394306</span>
+              <span class="contact-number">Anruf</span>
             </a>
           </li>
         </ul>
       </nav>
     </header>
-    
+    <!-- Floating Menu for Desktop -->
+    <nav id="floating-menu" class="floating-menu">
+      <ul class="floating-menu-nav">
+        <!-- WhatsApp Icon -->
+        <li class="menu-item" id="menu-whatsapp">
+          <a href="https://wa.me/your-number" class="menu-link" aria-label="Termin vereinbaren">
+            <img src="icons/whatsapp.svg" alt="WhatsApp Icon" class="menu-icon" />
+            <span class="menu-text">Termin vereinbaren</span>
+          </a>
+        </li>
+        <!-- Telephone Icon -->
+        <li class="menu-item" id="menu-telephone">
+          <a href="tel:051437394306" class="menu-link" aria-label="Anrufen">
+            <img src="icons/phone.svg" alt="Phone Icon" class="menu-icon" />
+            <span class="menu-text">Anrufen</span>
+          </a>
+        </li>
+        <!-- Email Icon -->
+        <li class="menu-item" id="menu-email">
+          <a href="mailto:cmd.jane@gmail.com" class="menu-link" aria-label="Email schreiben">
+            <img src="icons/email.svg" alt="Email Icon" class="menu-icon" />
+            <span class="menu-text">Email schreiben</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+
+
+
     <nav id="nav-mobile" class="nav-mobile" aria-label="Mobile Navigation">
       <ul>
-        <li style="border-top: 2px solid #fff;"><a href="leistungen.html">Leistungen</a></li>
+        <li style="border-top: 1px solid #fff;"><a href="leistungen.html">Leistungen</a></li>
         <li ><a href="ueber_mich.html">Über mich</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
-        <li style="border: 0; margin-top: 3rem;">
+        <li style="border: 0; margin-top: 5rem;">
+          <a class="mobile-contact-button" href="tel:051437394306" aria-label="Anrufen">
+            <img src="icons/whatsapp.svg" alt="Telefon Icon" />
+            <span class="contact-number">Whatsapp</span>
+          </a>
+        </li>
+        <li style="border: 0; margin-top: 2rem;">
+          <a class="mobile-contact-button" href="tel:051437394306" aria-label="Anrufen">
+            <img src="icons/phone.svg" alt="Telefon Icon" />
+            <span class="contact-number">Anruf</span>
+          </a>
+        </li>
+        <li style="border: 0; margin-top: 2rem;">
           <a
             class="mobile-contact-button"
             href="mailto:cmd.jane@gmail.com"
             aria-label="E-Mail Senden"
           >
             <img src="icons/email.svg" alt="E-Mail Icon" />
+            <span class="contact-number">E-mail senden</span>
           </a>
         </li>
-        <li style="border: 0; margin-top: 3rem;">
-          <a class="mobile-contact-button" href="tel:051437394306" aria-label="Anrufen">
-            <img src="icons/phone.svg" alt="Telefon Icon" />
-            <span class="contact-number">051437394306</span>
+        <li style="border: 0; margin-top: 2rem;">
+          <a class="mobile-contact-button" href="https://maps.app.goo.gl/2BNad3QmoL6qMC577" aria-label="Anrufen">
+            <img src="icons/location.svg" alt="Telefon Icon" />
+            <span class="contact-number">Adresse</span>
           </a>
         </li>
       </ul>
@@ -110,19 +155,29 @@
     </main>
     
     <footer class="footer" role="contentinfo">
-      <div class="contact" role="region" aria-labelledby="contact-heading">
-        <h3>Anschrift</h3>
-        <p>Physio Cover<br />Am Ortfelde 47<br />30016 Isernhagen</p>
-        <h3>Kontakt</h3>
-        <p>
-          Telefon: <a href="tel:051437394306">051437394306</a><br />Email:
-          <a href="mailto:cmd.jane@gmail.com">cmd.jane@gmail.com</a>
-        </p>
-        <h3>Behandlungszeiten</h3>
-        <p>Montag-Freitag 08:00-20:00<br />Termine nach Vereinbarung</p>
+      <div class="footer-container">
+        <a href="https://maps.app.goo.gl/2BNad3QmoL6qMC577" class="contact-footer" role="region" aria-labelledby="contact-heading">
+          <h3>Adresse</h3>
+          <p>Physio Cover<br />Am Ortfelde 47<br />30016 Isernhagen</p>
+        </a>
+        <div class="contact-footer" role="contact" aria-labelledby="contact-heading">
+          <h3>Kontakt</h3>
+          <p>
+            Telefon: <a href="tel:051437394306">051437394306</a><br />Email:
+            <a href="mailto:cmd.jane@gmail.com">cmd.jane@gmail.com</a>
+          </p>
+        </div>
+        <div class="contact-footer" role="time" aria-labelledby="contact-heading">
+          <h3>Behandlungszeiten</h3>
+          <p>Montag-Freitag 08:00-20:00<br />Termine nach Vereinbarung</p>
+        </div>
+      </div>
+      <div class="footer-container2">
+        <p>Copyright: Christiana Meyer-Dusche</p>
       </div>
     </footer>  
     
     <script src="scripts.js"></script>
   </body>
 </html>
+
