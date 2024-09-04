@@ -273,6 +273,9 @@ main {
   text-decoration: none;
   margin-left: 0.5rem;
 }
+.contact-number-div:hover {
+  color: #90BBAD;
+}
 
 .nav-mobile-icons {
   display: none;
@@ -465,20 +468,20 @@ h2 {
     position: absolute;
     margin-left: -1.8rem;
     margin-top: -0.4rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 700;
   }
   h1 {
     font-family: 'Catamaran', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .header {
@@ -563,6 +566,9 @@ h2 {
 /* Swiper styles */
 .swiper-container {
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
 }
 
 .swiper-slide {
@@ -579,10 +585,13 @@ h2 {
   aspect-ratio: 1 / 1;
   max-width: 100%;
   max-height: 100%;
-  border: 4px solid #BF9393;
 }
 .swiper-button-next, .swiper-button-prev {
   color: #fff !important;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #90BBAD !important;
 }
 /* Responsive behavior for the Swiper */
 @media (min-width: 1200px) {
