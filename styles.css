@@ -7,8 +7,9 @@ body {
   scroll-behavior: smooth;
   font-size: 1rem;
 }
-
-* { font: -apple-system-body !important; }
+* {
+  font: -apple-system-body !important;
+}
 
 html,
 body {
@@ -406,7 +407,7 @@ h2 {
   position: relative;
   transition: transform 0.3s ease;
   /* Smooth transition for moving in/out */
-  transform: translateX(7rem);
+  transform: translateX(7.5rem);
 }
 
 .menu-link {
@@ -433,7 +434,7 @@ h2 {
 }
 
 /* Individual hover effects to move the entire menu item */
-#menu-whatsapp:hover {
+#menu-adresse:hover {
   transform: translateX(0px);
   /* Move item left on hover */
 }
