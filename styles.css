@@ -45,17 +45,17 @@ body.no-scroll {
   text-align: center;
   margin: auto;
   color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0;
 }
 
 /* Main Content */
 main {
-  max-width: 1200px;
   padding: 1rem 8rem;
   margin: auto;
   background: transparent;
-  width: 100%;
-  display: flex;
-
 }
 
 .physio-word {
@@ -357,7 +357,7 @@ h2 {
 }
 
 footer {
-  position: fixed;
+  position: fixed !important;
   bottom: 0px;
   width: 100%;
 }
@@ -484,6 +484,18 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
+  .coming-soon {
+      width: 100%;
+      font-size: 3rem;
+      font-weight: 900;
+      text-align: center;
+      margin: auto;
+      color: #fff;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 3rem 0;
+    }
   main {
     padding: 1rem 1rem;
   }
@@ -520,7 +532,6 @@ footer {
   }
 
   .footer-container {
-    background-color: #BF9393;
     color: white;
     text-align: center;
     padding: 1.25rem 0;
@@ -528,7 +539,6 @@ footer {
   }
 
   .footer-container2 {
-    background-color: #BF9393;
     color: white;
     text-align: center;
     padding: 1.25rem 0;
