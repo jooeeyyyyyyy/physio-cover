@@ -71,6 +71,11 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   align-items: center;
+  background: rgb(219, 195, 195);
+    background: -moz-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+    background: radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbc3c3", endColorstr="#bf9393", GradientType=1);
 }
 
 .logo {
@@ -339,8 +344,15 @@ h2 {
   text-align: left;
 }
 
+footer{
+  background: rgb(219, 195, 195);
+    background: -moz-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+    background: radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbc3c3", endColorstr="#bf9393", GradientType=1);
+}
+
 .footer-container {
-  background-color: #BF9393;
   color: white;
   text-align: center;
   padding: 1.25rem 0;
@@ -357,7 +369,6 @@ h2 {
   padding: 1.25rem 0;
   margin: auto;
   justify-content: space-around;
-  background-color: #BF9393;
 }
 
 .footer h3 {
