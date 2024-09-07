@@ -1,15 +1,11 @@
 body {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Varela", sans-serif;
   margin: 0;
   padding: 0;
-  color: #fff;
+  background-color: #fff;
+  color: #BF9393;
   scroll-behavior: smooth;
   font-size: 1rem;
-    background: rgb(219, 195, 195);
-      background: -moz-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
-      background: -webkit-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
-      background: radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbc3c3", endColorstr="#bf9393", GradientType=1);
 }
 * {
   font: -apple-system-body !important;
@@ -20,9 +16,17 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Catamaran', sans-serif;
-  font: -apple-system-body !important;
-    
+  font-family: "Varela", sans-serif;
+  background: rgb(219, 195, 195);
+  background: -moz-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+  background: radial-gradient(circle, rgba(219, 195, 195, 1) 0%, rgba(191, 147, 147, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbc3c3", endColorstr="#bf9393", GradientType=1);
+  scroll-behavior: smooth;
+  overflow: hidden;
+  /* Prevent body from scrolling */
+  font-size: 1rem;
+  color: #BF9393;
 }
 
 body {
@@ -30,41 +34,31 @@ body {
   z-index: 1;
 }
 
-
-/* Prevent scrolling when mobile menu is open */
 body.no-scroll {
   overflow-y: hidden;
   position: fixed;
   width: 100%;
 }
 
-.coming-soon {
-  width: 100%;
-  font-size: 5rem;
-  font-weight: 900;
-  text-align: center;
-  margin: auto;
-  color: #fff;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 5rem 0;
+.scroll-container {
+  height: calc(100vh - 86.2px);
+  /* Adjust this to match your header's height */
+  overflow-y: auto;
+  /* Make only the main content scrollable */
 }
 
-/* Main Content */
 main {
+  max-width: 1000px;
   padding: 1rem 8rem;
   margin: auto;
-  background: transparent;
 }
 
 .physio-word {
   display: inline-flex;
   position: absolute;
-  margin-left: -3rem;
-  margin-top: -0.4rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  margin-left: -3.2rem;
 }
 
 /* Header and Footer */
@@ -76,19 +70,19 @@ main {
 }
 
 .header {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Varela", sans-serif;
   background-color: transparent;
   color: white;
   padding: 1rem 1.25rem;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   align-items: center;
 }
+
 
 .logo {
   flex: 1;
@@ -121,7 +115,7 @@ main {
 
 .nav-desktop-left ul li a,
 .nav-desktop-right ul li a {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Varela", sans-serif;
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
@@ -235,7 +229,7 @@ main {
 }
 
 .nav-mobile ul li a {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Varela", sans-serif;
   color: white;
   text-decoration: none;
   display: block;
@@ -275,7 +269,7 @@ main {
   display: block;
   align-items: center;
   width: fit-content;
-  color: #BF9393;
+  color: #fff;
   font-size: 1.5rem;
   text-align: left;
   font-weight: 700;
@@ -314,8 +308,8 @@ main {
 p {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: #BF9393;
-  font-family: 'Catamaran', sans-serif;
+  color: #fff;
+  font-family: "Varela", sans-serif;
   text-align: left;
 }
 
@@ -323,30 +317,32 @@ h1,
 h2,
 h3,
 p {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Varela", sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  text-transform: uppercase;
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Varela", sans-serif;
+  color: #fff;
 }
 
 .heading {
   text-align: left;
-  padding: 1.25rem;
+  padding: 0 1.25rem;
 }
 
 h1 {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Varela", sans-serif;
   font-size: 2rem;
   font-weight: 900;
   margin: 0.625rem 0;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 1.5rem;
+  font-weight: 900;
 }
 
 /* Sections */
@@ -356,12 +352,10 @@ h2 {
   text-align: left;
 }
 
-footer {
-  position: fixed !important;
-  bottom: 0px;
-  width: 100%;
+footer{
+  background: transparent;
+  padding: 8rem 0 2rem;
 }
-
 
 .footer-container {
   color: white;
@@ -413,7 +407,7 @@ footer {
 .floating-menu {
   position: fixed;
   right: 0;
-  top: 30%;
+  top: 40%;
   z-index: 1000;
   z-index: 1;
 }
@@ -429,7 +423,7 @@ footer {
   position: relative;
   transition: transform 0.3s ease;
   /* Smooth transition for moving in/out */
-  transform: translateX(7.5rem);
+  transform: translateX(8.5rem);
 }
 
 .menu-link {
@@ -484,18 +478,6 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-  .coming-soon {
-      width: 100%;
-      font-size: 3rem;
-      font-weight: 900;
-      text-align: center;
-      margin: auto;
-      color: #fff;
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 3rem 0;
-    }
   main {
     padding: 1rem 1rem;
   }
@@ -503,13 +485,12 @@ footer {
   .physio-word {
     display: inline-flex;
     position: absolute;
-    margin-left: -1.8rem;
-    margin-top: -0.4rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 700;
+    margin-left: -2.2rem;
   }
   h1 {
-    font-family: 'Catamaran', sans-serif;
+    font-family: "Varela", sans-serif;
     font-size: 1.75rem;
   }
 
