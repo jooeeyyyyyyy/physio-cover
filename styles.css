@@ -32,18 +32,10 @@ body {
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbc3c3", endColorstr="#bf9393", GradientType=1);
 	scroll-behavior: smooth;
-	overflow-x: hidden;
+	overflow: hidden;
 	/* Prevent body from scrolling */
 	font-size: 1rem;
 	color: #bf9393;
-	-webkit-background: -webkit-radial-gradient(
-		circle,
-		rgba(219, 195, 195, 1) 0%,
-		rgba(191, 147, 147, 1) 100%
-	);
-	-webkit-overflow-scrolling: touch; /* Improves scrolling performance */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -52,7 +44,7 @@ body {
 }
 
 body.no-scroll {
-	overflow-y: hidden;
+	overflow: hidden;
 	position: fixed;
 	width: 100%;
 }
@@ -62,11 +54,6 @@ body.no-scroll {
 	/* Adjust this to match your header's height */
 	overflow-y: auto;
 	/* Make only the main content scrollable */
-	-webkit-scroll-behavior: smooth;
-	scroll-behavior: smooth;
-	-webkit-overflow-scrolling: touch; /* Improves scrolling performance */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 main {
