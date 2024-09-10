@@ -547,9 +547,11 @@ footer {
 		display: block;
 	}
 
-	.floating-menu {
-		display: none;
+	.menu-item {
+		border: 1px solid #90bbad;
+		border-radius: 100px;
 	}
+
 	.welcome,
 	.leistungen,
 	.ueber_mich,
@@ -578,6 +580,10 @@ footer {
 
 @media (min-width: 1201px) {
 	.burger-menu {
+		display: none;
+	}
+
+	#menu-telephone {
 		display: none;
 	}
 
