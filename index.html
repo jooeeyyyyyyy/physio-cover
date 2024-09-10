@@ -13,14 +13,10 @@
 		/>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Varela:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Varela&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles.css" />
@@ -33,7 +29,6 @@
 			/* Critical CSS for above-the-fold content */
 			body,
 			html {
-				font-family: "Varela", sans-serif;
 				font-weight: 400;
 				font-style: normal;
 				margin: 0;
@@ -98,10 +93,10 @@
 			</div>
 			<nav class="nav-desktop-left" aria-label="Primäre Navigation">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="leistungen.html">Leistungen</a></li>
-					<li><a href="ueber_mich.html">Über mich</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a class=".nav-item" href="index.html">Home</a></li>
+					<li><a class=".nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class=".nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class=".nav-item" href="kontakt.html">Kontakt</a></li>
 				</ul>
 			</nav>
 			<div class="logo">
@@ -189,12 +184,12 @@
 
 			<nav id="nav-mobile" class="nav-mobile" aria-label="Mobile Navigation">
 				<ul>
-					<li style="border-top: 1px solid #fff">
+					<li>
 						<a href="index.html">Home</a>
 					</li>
-					<li><a href="leistungen.html">Leistungen</a></li>
-					<li><a href="ueber_mich.html">Über mich</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a class=".nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class=".nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class=".nav-item" href="kontakt.html">Kontakt</a></li>
 					<li style="border: 0; margin-top: 5rem">
 						<a
 							class="mobile-contact-button"
@@ -274,8 +269,9 @@
 					<p data-sr-id="4">
 						Schwerpunkte meiner physiotherapeutischen Behandlungen sind
 						Techniken aus der <strong> Manuellen Therapie (MT) </strong>für
-						orthopädisch-chirurgische Patienten sowie die
-						<strong> (KG ZNS nach Bobath)</strong> für neurologische Patienten.
+						orthopädisch-chirurgische Patienten und die
+						<strong> Bobath Therapie (KG ZNS)</strong> für neurologische
+						Patienten.
 					</p>
 				</section>
 
@@ -302,28 +298,28 @@
 						präventiv zu handeln und weiteren Verletzungen vorzubeugen.
 					</p>
 				</section>
-			</main>
-			<div class="swiper-container" data-sr-id="7">
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="images/Haustür.webp" alt="Image 1" />
+				<div class="swiper-container" data-sr-id="7">
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="images/Haustür.webp" alt="Image 1" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/Zimmer.webp" alt="Image 2" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/Haustür.webp" alt="Image 3" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/Zimmer.webp" alt="Image 4" />
+							</div>
 						</div>
-						<div class="swiper-slide">
-							<img src="images/Zimmer.webp" alt="Image 2" />
-						</div>
-						<div class="swiper-slide">
-							<img src="images/Haustür.webp" alt="Image 3" />
-						</div>
-						<div class="swiper-slide">
-							<img src="images/Zimmer.webp" alt="Image 4" />
-						</div>
+						<!-- Add navigation buttons -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
 					</div>
-					<!-- Add navigation buttons -->
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
 				</div>
-			</div>
+			</main>
 
 			<footer class="footer fade-in" role="contentinfo">
 				<div class="footer-container">
@@ -382,6 +378,26 @@
 							spaceBetween: 20,
 						},
 					},
+				});
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Get the current page URL
+				const currentPage = window.location.pathname.split("/").pop();
+
+				// Get all navigation items
+				const navItems = document.querySelectorAll(
+					".nav-desktop-left a, .nav-mobile a"
+				);
+
+				// Loop through each nav item
+				navItems.forEach((item) => {
+					// Check if the href matches the current page URL
+					if (item.getAttribute("href") === currentPage) {
+						// Add the 'active' class to the matching nav item
+						item.classList.add("active");
+					}
 				});
 			});
 		</script>

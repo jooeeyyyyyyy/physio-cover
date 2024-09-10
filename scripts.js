@@ -33,4 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		distance: "20px",
 		delay: 200,
 	});
+
+	// Add active class to navigation items
+	document.querySelectorAll(".nav-item a").forEach((item) => {
+		item.addEventListener("click", function () {
+			document.querySelectorAll(".nav-item a").forEach((link) => {
+				link.classList.remove("active");
+			});
+			this.classList.add("active");
+		});
+	});
 });

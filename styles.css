@@ -1,5 +1,5 @@
 body {
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
@@ -13,7 +13,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	background: rgb(219, 195, 195);
 	background: -moz-radial-gradient(
 		circle,
@@ -58,7 +58,7 @@ body.no-scroll {
 
 main {
 	max-width: 1000px;
-	padding: 1rem 8rem;
+	padding: 8rem;
 	margin: auto;
 }
 
@@ -79,7 +79,7 @@ main {
 }
 
 .header {
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	background-color: transparent;
 	color: white;
 	padding: 1rem 1.25rem;
@@ -90,6 +90,7 @@ main {
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 2px dotted #fff;
 }
 
 .logo {
@@ -98,13 +99,14 @@ main {
 }
 
 .logo img {
-	max-width: 25rem;
+	max-width: 35rem;
 	margin: 0 auto;
 }
 
 .nav-desktop-left,
 .nav-desktop-right {
 	display: none;
+	font-size: 1.5rem;
 }
 
 .nav-desktop-left ul,
@@ -123,10 +125,9 @@ main {
 
 .nav-desktop-left ul li a,
 .nav-desktop-right ul li a {
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	color: white;
 	text-decoration: none;
-	font-size: 1.5rem;
 	font-weight: 700;
 	display: inline-flex;
 	margin: auto;
@@ -136,6 +137,14 @@ main {
 .nav-desktop-left ul li a:hover,
 .nav-desktop-right ul li a:hover {
 	color: #90bbad;
+}
+
+.nav-item a {
+	text-decoration: none; /* Remove default underline */
+}
+
+.nav-item a.active {
+	text-decoration: underline; /* Underline when active */
 }
 
 .nav-desktop-left ul li a svg,
@@ -234,11 +243,11 @@ main {
 }
 
 .nav-mobile ul li {
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px dotted #fff;
 }
 
 .nav-mobile ul li a {
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	color: white;
 	text-decoration: none;
 	display: block;
@@ -318,7 +327,7 @@ p {
 	font-size: 1.5rem;
 	line-height: 1.6;
 	color: #fff;
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	text-align: left;
 }
 
@@ -326,13 +335,13 @@ h1,
 h2,
 h3,
 p {
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 }
 
 h1,
 h2,
 h3 {
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	color: #fff;
 }
 
@@ -342,7 +351,7 @@ h3 {
 }
 
 h1 {
-	font-family: "Varela", sans-serif;
+	font-family: "Zilla Slab", serif;
 	font-size: 2rem;
 	font-weight: 900;
 	margin: 0.625rem 0;
@@ -365,7 +374,8 @@ h2 {
 
 footer {
 	background: transparent;
-	padding: 8rem 0 2rem;
+	padding: 8rem 0 4rem;
+	border-top: 2px dotted #fff;
 }
 
 .footer-container {
@@ -488,7 +498,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 1200px) {
 	main {
-		padding: 1rem 1.5rem;
+		padding: 3rem 1.5rem;
 	}
 
 	.physio-word {
@@ -499,7 +509,7 @@ footer {
 		margin-left: -2.2rem;
 	}
 	h1 {
-		font-family: "Varela", sans-serif;
+		font-family: "Zilla Slab", serif;
 		font-size: 1.75rem;
 	}
 
@@ -514,10 +524,11 @@ footer {
 	.header {
 		display: flex;
 		max-height: 86.2px;
+		border-bottom: 1px dotted #fff;
 	}
 
 	.logo img {
-		max-width: 300px;
+		max-width: 350px;
 		margin: auto;
 	}
 
@@ -547,7 +558,24 @@ footer {
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) and (max-width: 1600px) {
+	.header {
+		display: flex;
+		justify-content: space-between;
+	}
+	.logo img {
+		max-width: 22rem;
+	}
+	.nav-desktop-left {
+		font-size: 1.25rem;
+	}
+	.nav-desktop-left ul,
+	.nav-desktop-right ul {
+		gap: 1rem;
+	}
+}
+
+@media (min-width: 1201px) {
 	.burger-menu {
 		display: none;
 	}
@@ -588,7 +616,7 @@ footer {
 	width: 100%;
 	max-width: 1200px;
 	margin: auto;
-	padding: 2rem 0;
+	padding: 1.25rem 0;
 }
 
 .swiper-slide {
