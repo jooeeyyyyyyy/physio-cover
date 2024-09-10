@@ -548,8 +548,11 @@ footer {
 	}
 
 	.menu-item {
-		border: 1px solid #90bbad;
 		border-radius: 100px;
+	}
+
+	.floating-menu {
+		display: none;
 	}
 
 	.welcome,
