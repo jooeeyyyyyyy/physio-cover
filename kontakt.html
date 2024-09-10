@@ -94,10 +94,10 @@
 			</div>
 			<nav class="nav-desktop-left" aria-label="Primäre Navigation">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="leistungen.html">Leistungen</a></li>
-					<li><a href="ueber_mich.html">Über mich</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a class="nav-item" href="index.html">Home</a></li>
+					<li><a class="nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class="nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class="nav-item" href="kontakt.html">Kontakt</a></li>
 				</ul>
 			</nav>
 			<div class="logo">
@@ -186,11 +186,11 @@
 			<nav id="nav-mobile" class="nav-mobile" aria-label="Mobile Navigation">
 				<ul>
 					<li>
-						<a href="index.html">Home</a>
+						<a class="nav-item" href="index.html">Home</a>
 					</li>
-					<li><a href="leistungen.html">Leistungen</a></li>
-					<li><a href="ueber_mich.html">Über mich</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a class="nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class="nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class="nav-item" href="kontakt.html">Kontakt</a></li>
 					<li style="border: 0; margin-top: 5rem">
 						<a
 							class="mobile-contact-button"
@@ -315,33 +315,45 @@
 					</p>
 				</div>
 			</footer>
-
-			<script src="scripts.js" defer></script>
-			<script>
-				ScrollReveal().reveal("[data-sr-id]", {
-					duration: 1000,
-					distance: "50px",
-				});
-			</script>
-			<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-			<script>
-				document.addEventListener("DOMContentLoaded", function () {
-					var swiper = new Swiper(".mySwiper", {
-						slidesPerView: 1,
-						spaceBetween: 10,
-						navigation: {
-							nextEl: ".swiper-button-next",
-							prevEl: ".swiper-button-prev",
-						},
-						breakpoints: {
-							768: {
-								slidesPerView: 2,
-								spaceBetween: 20,
-							},
-						},
-					});
-				});
-			</script>
 		</div>
+
+		<script src="scripts.js" defer></script>
+		<script>
+			ScrollReveal().reveal("[data-sr-id]", {
+				duration: 1000,
+				distance: "50px",
+			});
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var swiper = new Swiper(".mySwiper", {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					breakpoints: {
+						768: {
+							slidesPerView: 2,
+							spaceBetween: 20,
+						},
+					},
+				});
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const currentPage = window.location.pathname.split("/").pop();
+				const navItems = document.querySelectorAll(".nav-item");
+
+				navItems.forEach((item) => {
+					if (item.getAttribute("href") === currentPage) {
+						item.classList.add("active");
+					}
+				});
+			});
+		</script>
 	</body>
 </html>

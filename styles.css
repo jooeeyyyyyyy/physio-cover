@@ -143,8 +143,9 @@ main {
 	text-decoration: none; /* Remove default underline */
 }
 
-.nav-item a.active {
+.nav-item.active {
 	text-decoration: underline; /* Underline when active */
+	color: #90bbad;
 }
 
 .nav-desktop-left ul li a svg,
@@ -444,7 +445,7 @@ footer {
 	position: relative;
 	transition: transform 0.3s ease;
 	/* Smooth transition for moving in/out */
-	transform: translateX(8.5rem);
+	transform: translateX(7.7rem);
 	-webkit-transition: transform 0.3s ease;
 	transition: transform 0.3s ease;
 }

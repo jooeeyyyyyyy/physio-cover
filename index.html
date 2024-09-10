@@ -93,10 +93,10 @@
 			</div>
 			<nav class="nav-desktop-left" aria-label="Primäre Navigation">
 				<ul>
-					<li><a class=".nav-item" href="index.html">Home</a></li>
-					<li><a class=".nav-item" href="leistungen.html">Leistungen</a></li>
-					<li><a class=".nav-item" href="ueber_mich.html">Über mich</a></li>
-					<li><a class=".nav-item" href="kontakt.html">Kontakt</a></li>
+					<li><a class="nav-item" href="index.html">Home</a></li>
+					<li><a class="nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class="nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class="nav-item" href="kontakt.html">Kontakt</a></li>
 				</ul>
 			</nav>
 			<div class="logo">
@@ -185,11 +185,11 @@
 			<nav id="nav-mobile" class="nav-mobile" aria-label="Mobile Navigation">
 				<ul>
 					<li>
-						<a href="index.html">Home</a>
+						<a class="nav-item" href="index.html">Home</a>
 					</li>
-					<li><a class=".nav-item" href="leistungen.html">Leistungen</a></li>
-					<li><a class=".nav-item" href="ueber_mich.html">Über mich</a></li>
-					<li><a class=".nav-item" href="kontakt.html">Kontakt</a></li>
+					<li><a class="nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class="nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class="nav-item" href="kontakt.html">Kontakt</a></li>
 					<li style="border: 0; margin-top: 5rem">
 						<a
 							class="mobile-contact-button"
@@ -383,19 +383,11 @@
 		</script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
-				// Get the current page URL
 				const currentPage = window.location.pathname.split("/").pop();
+				const navItems = document.querySelectorAll(".nav-item");
 
-				// Get all navigation items
-				const navItems = document.querySelectorAll(
-					".nav-desktop-left a, .nav-mobile a"
-				);
-
-				// Loop through each nav item
 				navItems.forEach((item) => {
-					// Check if the href matches the current page URL
 					if (item.getAttribute("href") === currentPage) {
-						// Add the 'active' class to the matching nav item
 						item.classList.add("active");
 					}
 				});

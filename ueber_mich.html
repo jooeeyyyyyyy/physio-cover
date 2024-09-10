@@ -94,10 +94,10 @@
 			</div>
 			<nav class="nav-desktop-left" aria-label="Primäre Navigation">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="leistungen.html">Leistungen</a></li>
-					<li><a href="ueber_mich.html">Über mich</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a class="nav-item" href="index.html">Home</a></li>
+					<li><a class="nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class="nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class="nav-item" href="kontakt.html">Kontakt</a></li>
 				</ul>
 			</nav>
 			<div class="logo">
@@ -186,11 +186,11 @@
 			<nav id="nav-mobile" class="nav-mobile" aria-label="Mobile Navigation">
 				<ul>
 					<li>
-						<a href="index.html">Home</a>
+						<a class="nav-item" href="index.html">Home</a>
 					</li>
-					<li><a href="leistungen.html">Leistungen</a></li>
-					<li><a href="ueber_mich.html">Über mich</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a class="nav-item" href="leistungen.html">Leistungen</a></li>
+					<li><a class="nav-item" href="ueber_mich.html">Über mich</a></li>
+					<li><a class="nav-item" href="kontakt.html">Kontakt</a></li>
 					<li style="border: 0; margin-top: 5rem">
 						<a
 							class="mobile-contact-button"
@@ -336,5 +336,17 @@
 				});
 			</script>
 		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const currentPage = window.location.pathname.split("/").pop();
+				const navItems = document.querySelectorAll(".nav-item");
+
+				navItems.forEach((item) => {
+					if (item.getAttribute("href") === currentPage) {
+						item.classList.add("active");
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
