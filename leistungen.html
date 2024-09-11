@@ -4,12 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>
-			Physio Cover - Physiotherapie in Isernhagen - Christiane Meyer-Dusche |
-			Physiotherapeuth in Hannover
+			Leistungen in der Praxis und als Hausbesuch - Physio Cover -
+			Physiotherapie in Isernhagen - Christiane Meyer-Dusche
 		</title>
 		<meta
 			name="description"
-			content="Physio Cover, Praxis für Physiotherapie in Isernhagen - Hannover. Christiane Meyer-Dusche spezialisiert auf manuelle Therapie, Rehabilitation und Bobath Therapie in der Praxis und als Hausbesuch. Vereinbaren Sie jetzt einen Termin. Physiotherapeuth in meiner Nähe. physio near me"
+			content="Physio Cover, Christiane Meyer-Dusche Leistungen in der Praxis und als Hausbesuch. Ch KG  -  Krankengymnastik, MT  -  Manuelle Therapie, 	KG ZNS  -  Krankengymnastik zentrales Nervensystem nach Bobath, PNF  -  Propiozeptive Neuromuskuläre Fascilitation, Sportphysiotherapie, Atemtherapie, Prävention"
 		/>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -77,14 +77,25 @@
 					"telephone": "+491628377779",
 					"contactType": "customer service"
 				},
-				"sameAs": [
-					"https://www.facebook.com/physio-cover",
-					"https://www.instagram.com/physio-cover"
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "Home",
+						"item": "https://www.physio-cover.de/index.html"
+					},
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"name": "Leistungen",
+						"item": "https://www.physio-cover.de/leistungen.html"
+					}
 				]
 			}
 		</script>
 	</head>
-
 	<body>
 		<header class="header fade-in" role="banner">
 			<div class="burger-menu" id="burger-menu" aria-label="Navigationsmenü">
@@ -319,6 +330,12 @@
 						Copyright: Christiane Meyer-Dusche | Physio-Cover | Physiotherapie
 						Isernhagen
 					</p>
+					<nav aria-label="Breadcrumb" class="breadcrumb">
+						<ol>
+							<li><a href="index.html">Home</a></li>
+							<li aria-current="page">Leistungen</li>
+						</ol>
+					</nav>
 				</div>
 			</footer>
 
