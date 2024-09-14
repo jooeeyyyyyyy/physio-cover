@@ -6,6 +6,7 @@ body {
 	color: #bf9393;
 	scroll-behavior: smooth;
 	font-size: 1rem;
+	height: 100vh;
 }
 
 html,
@@ -34,10 +35,11 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bf9393",endColorstr="#7e5b5b",GradientType=1);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbc3c3", endColorstr="#bf9393", GradientType=1);
 	scroll-behavior: smooth;
-	overflow: hidden;
+	overflow-x: hidden;
 	/* Prevent body from scrolling */
 	font-size: 1rem;
 	color: #bf9393;
+	height: 100vh;
 }
 
 body {
@@ -56,6 +58,7 @@ body.no-scroll {
 	/* Adjust this to match your header's height */
 	overflow-y: auto;
 	/* Make only the main content scrollable */
+	scroll-behavior: smooth;
 }
 
 main {
@@ -229,7 +232,7 @@ main {
 	right: -100%;
 	width: 100%;
 	height: 100%;
-	background-color: #bf9393;
+	background: #7e5b5b;
 	z-index: 2;
 	text-align: center;
 	display: flex;
@@ -536,7 +539,7 @@ footer {
 	}
 
 	.logo-mobile img {
-		max-width: 350px;
+		max-width: 22rem;
 		margin: auto;
 	}
 
